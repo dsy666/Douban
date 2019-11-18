@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0 //EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.Douban.mapper.FilmMapper">
+    <!--    <insert id="addBook" parameterType="com.example.demo.Book">-->
+    <!--        INSERT INTO book(name,author) VALUES (#{name},#{author})-->
+    <!--    </insert>-->
+
+    <!--    <delete id="deleteBookById" parameterType="int">-->
+    <!--        DELETE FROM book WHERE id=#{id}-->
+    <!--    </delete>-->
+
+    <!--    <update id="updateBookById" parameterType="com.example.demo.Book">-->
+    <!--        UPDATE book set name =#{name},author=#{author} WHERE id=#{id}-->
+    <!--    </update>-->
+
+    <!--    <select id="getBookById" parameterType="int" resultType="com.example.demo.Book">-->
+    <!--        SELECT * FROM book WHERE id=#{id}-->
+    <!--    </select>-->
+
+    <!--    <select id="getAllBooks" resultType="com.example.demo.Book">-->
+    <!--        SELECT * FROM book-->
+    <!--    </select>-->
+    <select id="selectFromTimeAndArea" parameterType="com.example.Douban.pojo.FilmParam" resultType="com.example.Douban.pojo.Film">
+        SELECT * FROM film WHERE release_time>#{date} AND #{area_id}>area_id ORDER BY comment_num DESC LIMIT #{limitnum}
+    </select>
+</mapper>
