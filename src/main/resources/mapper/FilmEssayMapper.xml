@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0 //EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.Douban.mapper.FilmDetailMapper">
+<mapper namespace="com.example.Douban.mapper.FilmEssayMapper">
     <!--    <insert id="addBook" parameterType="com.example.demo.Book">-->
     <!--        INSERT INTO book(name,author) VALUES (#{name},#{author})-->
     <!--    </insert>-->
@@ -22,7 +22,7 @@
     <!--    <select id="getAllBooks" resultType="com.example.demo.Book">-->
     <!--        SELECT * FROM book-->
     <!--    </select>-->
-    <select id="selectMessageById" parameterType="com.example.Douban.pojo.FilmDetailParam" resultType="com.example.Douban.pojo.FilmDetail">
-        SELECT film.*,film_review.content FROM film INNER JOIN film_review WHERE film.id=#{id} ORDER BY film_review.useful_count LIMIT 10
+    <select id="selectfilmEssay" parameterType="Integer" resultType="com.example.Douban.pojo.FilmEssay">
+        SELECT * FROM film_essay WHERE id=#{id}
     </select>
 </mapper>
