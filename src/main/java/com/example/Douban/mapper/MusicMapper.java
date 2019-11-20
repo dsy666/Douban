@@ -9,4 +9,6 @@ import java.util.List;
 public interface MusicMapper {
 
     List<Music> selectTop50();
+
+    Music selectById(Integer id);
 }

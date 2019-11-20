@@ -4,4 +4,8 @@
   <select id="selectTop50" resultType="com.example.Douban.pojo.Music">
     SELECT * FROM music ORDER BY essay_count+review_count DESC 	LIMIT 50
   </select>
+
+  <select id="selectById" resultType="com.example.Douban.pojo.Music" parameterType="Integer">
+    select * from music where id = #{v }
+  </select>
 </mapper>
