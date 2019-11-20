@@ -4,6 +4,7 @@ import com.example.Douban.pojo.Music;
 import com.example.Douban.pojo.MusicDetail;
 import com.example.Douban.service.MusicService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,8 +24,8 @@ public class MusicController {
         return musicList;
     }
 
-    @RequestMapping("/detail")
-    public MusicDetail selectDetail(Integer id){
+    @RequestMapping("/detail/{id}")
+    public MusicDetail selectDetail(@PathVariable() Integer id){
         MusicDetail musicDetail =musicService.selectDetail(id);
 
         return musicDetail;
