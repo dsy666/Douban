@@ -3,13 +3,12 @@ package com.example.Douban.controller;
 import com.example.Douban.pojo.Book;
 import com.example.Douban.pojo.BookEssay;
 import com.example.Douban.pojo.BookReturn;
-import com.example.Douban.pojo.BookReview;
 import com.example.Douban.service.BookEssayService;
 import com.example.Douban.service.BookReviewService;
 import com.example.Douban.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -27,21 +26,22 @@ public class BookController {
     @Autowired
     BookReviewService bookReviewService;
 
-    @RequestMapping("/book")
-    public List<Book> showBook(){
-        List<Book> listbooks=bookService.selectBook();
-        return listbooks;
+    @GetMapping("/book")
+    public List<BookReturn> showBook(){
+        List<BookReturn> listbook=bookService.selectBook();
+        return listbook;
     }
 
-    @RequestMapping("/bookEssay")
+    @GetMapping("/bookEssay")
     public List<BookEssay> showBookEssay(){
         List<BookEssay> listBookEssay=bookEssayService.selBookEssayById(1000016);
         return  listBookEssay;
     }
 
-    @RequestMapping("/bookReview")
-    public List<BookReview> showBookReview(){
-        return bookReviewService.selBookReviewById(1002299);
+    @GetMapping("/bookReview")
+    public List<Book> showBookReview(){
+        List<Book> listBookReview=bookReviewService.selBookReviewById(1002299);
+        return listBookReview;
     }
 
 }

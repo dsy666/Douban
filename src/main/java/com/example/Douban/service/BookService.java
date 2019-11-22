@@ -14,7 +14,7 @@ public class BookService {
     @Autowired
     BookMapper bookmapper;
 
-    public List<Book> selectBook() {
+    public List<BookReturn> selectBook() {
         return bookmapper.selectBook();
     }
 

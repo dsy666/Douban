@@ -1,11 +1,11 @@
 package com.example.Douban.mapper;
 
-import com.example.Douban.pojo.BookReview;
+import com.example.Douban.pojo.Book;
 
 import java.util.List;
 
 public interface BookReviewMapper {
 
-    public List<BookReview> selBookReviewById(Integer id);
+    public List<Book> selBookReviewById(Integer id);
 
 }

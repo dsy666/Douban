@@ -18,6 +18,7 @@ public class Book {
     private Integer essay_count;
     private Integer review_count;
     private String icon_url;
+    private String book_review_content;
 
     public Integer getId() {
         return id;
@@ -155,6 +156,14 @@ public class Book {
         this.icon_url = icon_url;
     }
 
+    public String getBook_review_content() {
+        return book_review_content;
+    }
+
+    public void setBook_review_content(String book_review_content) {
+        this.book_review_content = book_review_content;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -175,6 +184,7 @@ public class Book {
                 ", essay_count=" + essay_count +
                 ", review_count=" + review_count +
                 ", icon_url='" + icon_url + '\'' +
+                ", book_review_content='" + book_review_content + '\'' +
                 '}';
     }
 }
