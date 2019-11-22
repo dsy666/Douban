@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0 //EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.Douban.mapper.BookReviewMapper">
-    <select id="selBookReviewById" parameterType="Integer" resultType="com.example.Douban.pojo.BookReview">
+    <select id="selBookReviewById" parameterType="Integer" resultType="com.example.Douban.pojo.Book">
         select book.*,book_review.content from book inner join book_review where book.id=#{id} order by book_review.useful_count limit 10
     </select>
 </mapper>
