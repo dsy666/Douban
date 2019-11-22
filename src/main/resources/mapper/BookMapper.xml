@@ -4,6 +4,6 @@
                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.Douban.mapper.BookMapper">
     <select id="selectBook" resultType="com.example.Douban.pojo.BookReturn">
-        select * from book order by essay_count+review_count DESC limit 10
+        select icon_url,name,author,intro from book order by essay_count+review_count DESC limit 10
     </select>
 </mapper>
