@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface BookMapper {
 
-    List<BookReturn> selectBook();
+    List<Book> selectBook();
 }
