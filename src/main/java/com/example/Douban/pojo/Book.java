@@ -18,10 +18,7 @@ public class Book {
     private Integer essay_count;
     private Integer review_count;
     private String icon_url;
-<<<<<<< HEAD
     private String content;
-=======
->>>>>>> parent of 2154a3c... book modify
 
     public Integer getId() {
         return id;
@@ -159,7 +156,6 @@ public class Book {
         this.icon_url = icon_url;
     }
 
-<<<<<<< HEAD
     public String getContent() {
         return content;
     }
@@ -168,8 +164,7 @@ public class Book {
         this.content = content;
     }
 
-=======
->>>>>>> parent of 2154a3c... book modify
+
     @Override
     public String toString() {
         return "Book{" +
@@ -190,10 +185,8 @@ public class Book {
                 ", essay_count=" + essay_count +
                 ", review_count=" + review_count +
                 ", icon_url='" + icon_url + '\'' +
-<<<<<<< HEAD
                 ", content='" + content + '\'' +
-=======
->>>>>>> parent of 2154a3c... book modify
+
                 '}';
     }
 }
