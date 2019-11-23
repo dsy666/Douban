@@ -18,6 +18,7 @@ public class Film {
     private String review_num;
     private String essay_num;
     private String comment_num;
+    private String movie_icon;
 
     public Integer getId() {
         return id;
@@ -155,6 +156,14 @@ public class Film {
         this.comment_num = comment_num;
     }
 
+    public String getMovie_icon() {
+        return movie_icon;
+    }
+
+    public void setMovie_icon(String movie_icon) {
+        this.movie_icon = movie_icon;
+    }
+
     @Override
     public String toString() {
         return "Film{" +
@@ -175,6 +184,7 @@ public class Film {
                 ", review_num='" + review_num + '\'' +
                 ", essay_num='" + essay_num + '\'' +
                 ", comment_num='" + comment_num + '\'' +
+                ", movie_icon='" + movie_icon + '\'' +
                 '}';
     }
 }

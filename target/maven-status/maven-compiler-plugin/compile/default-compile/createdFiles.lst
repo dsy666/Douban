@@ -1,0 +1,6 @@
+com\example\douban\pojo\Book.class
+com\example\douban\controller\BookController.class
+com\example\douban\pojo\BookReview.class
+com\example\douban\mapper\BookMapper.class
+com\example\douban\service\BookService.class
+com\example\douban\pojo\BookEssay.class
