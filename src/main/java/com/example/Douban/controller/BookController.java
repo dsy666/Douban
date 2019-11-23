@@ -4,14 +4,13 @@ import com.example.Douban.pojo.Book;
 import com.example.Douban.pojo.BookEssay;
 import com.example.Douban.service.BookEssayService;
 import com.example.Douban.service.BookService;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-@Api ("电影操作接口")
+
 @RestController
 @CrossOrigin
 public class BookController<BookReview> {

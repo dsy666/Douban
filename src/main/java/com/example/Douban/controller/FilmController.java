@@ -25,8 +25,6 @@ import java.util.List;
  * @date 2019/11/21 17:14
  * @since JDK 1.8
  */
-
-@Api ("电影操作接口")
 @RestController
 @CrossOrigin
 public class FilmController {
@@ -40,7 +38,6 @@ public class FilmController {
     @Autowired
     FilmEssayService filmEssayService=new FilmEssayService();
 
-    @ApiOperation(value = "提供当前一周评论最多的50部电影的降序排行",notes = "无输入参数")
     @GetMapping("/film")
     public List<Film> filmShow() throws ParseException {
         Film f=new Film();
