@@ -5,6 +5,8 @@ import com.example.Douban.pojo.FilmEssay;
 import com.example.Douban.service.FilmDetailService;
 import com.example.Douban.service.FilmEssayService;
 import com.example.Douban.service.FilmService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +26,7 @@ import java.util.List;
  * @since JDK 1.8
  */
 
+@Api ("电影操作接口")
 @RestController
 @CrossOrigin
 public class FilmController {
@@ -37,6 +40,7 @@ public class FilmController {
     @Autowired
     FilmEssayService filmEssayService=new FilmEssayService();
 
+    @ApiOperation(value = "提供当前一周评论最多的50部电影的降序排行",notes = "无输入参数")
     @GetMapping("/film")
     public List<Film> filmShow() throws ParseException {
         Film f=new Film();

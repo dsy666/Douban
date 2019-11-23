@@ -164,7 +164,6 @@ public class Book {
         this.content = content;
     }
 
-
     @Override
     public String toString() {
         return "Book{" +
